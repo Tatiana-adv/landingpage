@@ -1,0 +1,171 @@
+/* Importação de fontes (ex: Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa; /* Um cinza claro para o fundo geral */
+}
+
+/* Hero Section (Cabeçalho principal) */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://assets.pokemon.com/assets/cms2/img/misc/wallpaper/ash-friends/ash-friends-1920x1080.jpg') no-repeat center center; /* Imagem de fundo Pokémon */
+    background-size: cover;
+    height: 80vh; /* Ocupa 80% da altura da viewport */
+    min-height: 500px;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Extra bold */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Botão CTA personalizado no Hero */
+.custom-btn-pulse {
+    background-color: #FFDE00; /* Amarelo Pokémon */
+    border-color: #FFDE00;
+    color: #2e3034; /* Cor escura para o texto */
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    border-radius: 50px; /* Botão mais arredondado */
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite; /* Efeito de pulso */
+}
+
+.custom-btn-pulse:hover {
+    background-color: #f0cd00;
+    border-color: #f0cd00;
+    transform: translateY(-3px); /* Leve levantamento no hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: none; /* Para a animação no hover */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Seção de Destaque dos Produtos */
+.produtos-destaque {
+    background-color: #ffffff; /* Fundo branco para os produtos */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.produtos-destaque h2 {
+    color: #CC0000; /* Vermelho Pokémon */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.product-card {
+    border-radius: 15px;
+    overflow: hidden; /* Garante que a imagem não vaze nas bordas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Efeito de flutuação no hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    height: 250px; /* Altura fixa para as imagens dos cards */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.product-card .card-body {
+    padding: 25px;
+}
+
+.product-card .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Botões dos cards */
+.btn-danger { background-color: #CC0000; border-color: #CC0000; }
+.btn-danger:hover { background-color: #a30000; border-color: #a30000; }
+.btn-primary { background-color: #3B4CCA; border-color: #3B4CCA; } /* Azul Pokémon */
+.btn-primary:hover { background-color: #2a3a9a; border-color: #2a3a9a; }
+.btn-info { background-color: #28a745; border-color: #28a745; } /* Verde para "Saber Mais" */
+.btn-info:hover { background-color: #218838; border-color: #218838; }
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #e9ecef; /* Um cinza mais escuro */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.newsletter-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2e3034;
+}
+
+.newsletter-section .form-control-lg {
+    border-radius: 50px;
+    padding: 12px 25px;
+    border: 1px solid #ced4da;
+}
+
+.newsletter-section .btn-success {
+    background-color: #7AC74C; /* Verde mais claro para o CTA */
+    border-color: #7AC74C;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-section .btn-success:hover {
+    background-color: #63a83f;
+    border-color: #63a83f;
+}
+
+/* Rodapé */
+.footer-section {
+    background-color: #212529; /* Praticamente preto */
+}
+
+.footer-section .social-icons a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section .social-icons a:hover {
+    color: #fff !important;
+}
+
+/* Responsividade (ajustes para telas menores) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .custom-btn-pulse {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+    .produtos-destaque h2 {
+        font-size: 2rem;
+    }
+    .newsletter-section h2 {
+        font-size: 2rem;
+    }
+}
